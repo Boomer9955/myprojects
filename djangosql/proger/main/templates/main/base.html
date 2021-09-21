@@ -1,0 +1,30 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% block title %}{% endblock title %}</title>
+    <link rel="stylesheet" href=https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css>
+    <link rel="stylesheet" href="{% static 'main/css/main.css' %}">
+    <link rel="stylesheet" href=https://use.fontawesome.com/releases/v5.8.2/css/all.css>
+</head>
+<body>
+    <aside>
+        <img src="{% static 'main/img/default.jpg' %}" alt="Logo">
+        <span class="logo">My web</span>
+        <h3>Навигация</h3>
+        <ul>
+            <a href="{% url 'home' %}"><li><i class="fas fa-igloo"></i>Главная</li></a>
+            <a href="{% url 'about' %}"><li><i class="fas fa-car-side"></i>About</li></a>
+            <a href="{% url 'news_home' %}"><li><i class="fas fa-kiwi-bird"></i>Новости</li></a>
+            <a href=""><li><i class="fas fa-id-card"></i>Контакт</li></a>
+            <a href="{% url 'create' %}"><li><button class="btn btn-info"><i class="fas fa-plus-circle"></i>Добавить Запись</button></li></a>
+    </aside>
+    <main>
+        {% block content %}
+        {% endblock content %}
+    </main>
+</body>
+</html>
