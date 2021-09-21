@@ -29,7 +29,7 @@ def create(request):
         form = ArtilesForm(request.POST)
         if form.is_valid():
             form.save()
-            return redirect('news')
+            return redirect('news_home')
         else:
             error = 'Форма была не верной'
 
