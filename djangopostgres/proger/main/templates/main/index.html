@@ -1,0 +1,21 @@
+{% extends 'main/base.html' %}
+
+{% block title %}{{ title }}{% endblock title %}
+
+{% block content %}
+    <div class="features">
+        <h1>{{ title }}</h1>
+        <p>prosto</p>
+        <button class="btn btn-warning">{% filter lower %}about{% endfilter %}</button>
+
+        {% for el in values %}
+            <p>{{ el }}</p>
+        {% endfor %}
+
+        {% for el in obj %}
+            {% if el == 'age' %}
+                    <p>{{ el|upper }}</p>
+            {% endif %}
+        {% endfor %}
+    </div>
+{% endblock content %}
