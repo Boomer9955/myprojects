@@ -17,7 +17,7 @@ RUN pip3 install -r requirements.txt
 
 #entrypoint
 COPY entrypoint.sh .
-RUN chmod +x /usr/src/app/entrypoint.sh
+RUN chmod 777 /usr/src/app/entrypoint.sh
 
 COPY . .
 CMD python3 proger/manage.py migrate
