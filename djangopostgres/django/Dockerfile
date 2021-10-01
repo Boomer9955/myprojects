@@ -15,12 +15,13 @@ RUN pip install --upgrade pip
 COPY requirements.txt requirements.txt
 RUN pip3 install -r requirements.txt
 
-#entrypoint
-COPY entrypoint.sh .
-RUN chmod 777 /usr/src/app/entrypoint.sh
 
 COPY . .
 CMD python3 proger/manage.py migrate
 
+#docker-compose
 # run entrypoint.sh
-ENTRYPOINT ["/usr/src/app/entrypoint.sh"]
+#entrypoint
+#COPY entrypoint.sh .
+#RUN chmod 777 /usr/src/app/entrypoint.sh
+#ENTRYPOINT ["/usr/src/app/entrypoint.sh"]
