@@ -17,7 +17,7 @@ RUN pip install -r requirements.txt
 
 
 COPY . .
-CMD python manage.py migrate
+CMD python manage.py runserver 0.0.0.0:8010
 
 #docker-compose
 # run entrypoint.sh
