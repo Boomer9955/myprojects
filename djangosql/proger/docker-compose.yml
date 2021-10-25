@@ -1,0 +1,10 @@
+  
+version: '3.7'
+services:
+  web:
+    build: ./
+    command: python manage.py runserver 0.0.0.0:8010
+    volumes:
+      - /Users/rombi/mydir/myprojects/djangosql
+    ports:
+      - 8010:8010

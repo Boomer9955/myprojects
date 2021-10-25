@@ -3,3 +3,5 @@ django-health-check
 psycopg2-binary
 celery
 kombu
+python-logstash
+django-elasticsearch-dsl
