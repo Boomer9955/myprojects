@@ -128,7 +128,7 @@ STATICFILES_DIRS = [
 
 ELASTICSEARCH_DSL={
     'default': {
-        'hosts': '172.21.16.1:9200'
+        'hosts': '172.30.0.1:9200'
     },
 }
 
@@ -149,7 +149,7 @@ LOGGING = {
         'logstash': {
             'level': 'DEBUG',
             'class': 'logstash.TCPLogstashHandler',
-            'host': '172.21.16.1',
+            'host': '172.30.0.1',
             'port': 5000, # Default value: 5959
             'version': 1, # Version of logstash event schema. Default value: 0 (for backward compatibility of the library)
             'message_type': 'django',  # 'type' field in logstash message. Default value: 'logstash'.
